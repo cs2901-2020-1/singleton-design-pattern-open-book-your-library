@@ -4,21 +4,31 @@ package ChocolateBoiler;
 public class ChocolateBoilerTest {
     public static void main(String[] args) {
        
-        ChocolateBoiler recipiente = new ChocolateBoiler();
-        System.out.println("Verificamos si está vacío y si no a hervido");
-        System.out.print("Esta vacío :"+ isEmpty());System.out.println(" Esta hervido :"+ isBoiled());
-
-        System.out.println("Se llena el recipiente");
-        recipiente.fill();//llenamos el recipiente
-        System.out.println("(Verificar)Esta vacío :"+ isEmpty());
+        ChocolateBoiler recipiente1 = new ChocolateBoiler();
+        ChocolateBoiler recipiente2 = new ChocolateBoiler();
         
-        System.out.println("Se hierve el recipiente");
-        recipiente.boil();
-        System.out.println("(Verificar)Esta hervido :"+ isBoiled());
+        System.out.println("Verificamos si están vacíos");
+        System.out.println("Esta vacío, recipiente1:"+recipiente1.isEmpty());
+        System.out.println("Esta vacío, recipiente2:"+recipiente2.isEmpty());
 
-        System.out.println("Se vierte el recipiente");
-        recipiente.drain();
-        System.out.println("(Verificar)Esta vacío :"+ isEmpty());
+        System.out.println("Se llena el recipiente 1 y 2");
+        recipiente1.fill();//llenamos el recipiente
+        recipiente2.fill();
+        System.out.println("(Verificar)Esta vacío rec1:"+ recipiente1.isEmpty());
+        System.out.println("(Verificar)Esta vacío rec2:"+ recipiente2.isEmpty());
+    
+        System.out.println("Se hierve el recipiente 1");
+        recipiente1.boil();
+        System.out.println("(Verificar)Esta hervido rec1:"+ rec1.isBoiled());
+
+        System.out.println("Se vierte el recipiente 1");
+        recipiente1.drain();
         
+        System.out.println("(Verificar)Esta vacío rec1:"+ rec1.isEmpty());
+        System.out.println("(Verificar)Esta hervido rec1:"+ rec1.isBoiled());
+        System.out.println("(Verificar)Esta vacío rec2:"+ rec2.isEmpty());
+        System.out.println("(Verificar)Esta hervido rec2:"+ rec2.isBoiled());
+        System.out.println("Ambas instancias se comportan de forma diferente");
+
     }
 }
