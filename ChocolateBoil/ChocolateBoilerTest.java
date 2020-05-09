@@ -1,5 +1,4 @@
-package ChocolateBoiler;
-
+package ChocolateBoil;
 
 public class ChocolateBoilerTest {
     public static void main(String[] args) {
