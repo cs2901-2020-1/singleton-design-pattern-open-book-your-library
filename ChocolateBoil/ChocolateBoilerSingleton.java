@@ -3,12 +3,14 @@ public class ChocolateBoilerSingleton {
     private static ChocolateBoilerSingleton instance;
     private boolean empty;
     private boolean boiled;
-
-    private ChocolateBoiler() {
-        if(instance == null){
-            instance = new ChocolateBoilerSingleton();
+    private ChocolateBoilerSingleton() {
             empty = true;
             boiled = false;
+        }
+
+    public static ChocolateBoilerSingleton getInstance() {
+        if(instance == null){
+            instance = new ChocolateBoilerSingleton();
         }
         return instance;
     }

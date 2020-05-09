@@ -18,15 +18,15 @@ public class ChocolateBoilerTest {
     
         System.out.println("Se hierve el recipiente 1");
         recipiente1.boil();
-        System.out.println("(Verificar)Esta hervido rec1:"+ rec1.isBoiled());
+        System.out.println("(Verificar)Esta hervido rec1:"+ recipiente1.isBoiled());
 
         System.out.println("Se vierte el recipiente 1");
         recipiente1.drain();
         
-        System.out.println("(Verificar)Esta vacío rec1:"+ rec1.isEmpty());
-        System.out.println("(Verificar)Esta hervido rec1:"+ rec1.isBoiled());
-        System.out.println("(Verificar)Esta vacío rec2:"+ rec2.isEmpty());
-        System.out.println("(Verificar)Esta hervido rec2:"+ rec2.isBoiled());
+        System.out.println("(Verificar)Esta vacío rec1:"+ recipiente1.isEmpty());
+        System.out.println("(Verificar)Esta hervido rec1:"+ recipiente1.isBoiled());
+        System.out.println("(Verificar)Esta vacío rec2:"+ recipiente2.isEmpty());
+        System.out.println("(Verificar)Esta hervido rec2:"+ recipiente2.isBoiled());
         System.out.println("Ambas instancias se comportan de forma diferente");
 
     }
